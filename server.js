@@ -45,3 +45,9 @@ db.sequelize.sync(syncOptions).then(function() {
 });
 
 module.exports = app;
+
+//For later use:
+//   "production": {
+//     "use_env_variable": "JAWSDB_URL",
+//     "dialect": "mysql"
+//}
