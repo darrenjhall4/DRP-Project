@@ -19,7 +19,53 @@
     </style>
   </head>
   <body>
-    <div id="map"></div>
+  <div class="card card-default"> 
+    <div class="card-body">
+      <div id="map"></div>
+    </div>
+  </div>
+
+  <div class="container">
+      <!-- Sign-Up Card-->
+          <div class="col-lg-6">
+            <div class="card card-default">
+              <div class="card-header">
+                Post A Historical Landmark
+              </div>
+              <div class="card-body">
+                <!-- Sign-up Form (note the various input "types")-->
+                <form role="form">
+                  <div class="form-group row">
+                    <label for="name-input">Name:</label>
+                    <input class="form-control" id="name-input" type="text">
+                  </div>
+                  <div class="form-group row">
+                    <label for="location-input">Location:</label>
+                    <input class="form-control" id="location-input" type="text">
+            </div>
+            <div class="form-group row">
+                    <label for="lat-input">Latitude:</label>
+                    <input class="form-control" id="lat-input" type="text">
+                  </div>
+            <div class="form-group row">
+                    <label for="long-input">Longitude:</label>
+                    <input class="form-control" id="long-input" type="text">
+                  </div>
+                  <div class="form-group row">
+                    <label for="comment-input">Brief Summary</label>
+                    <textarea class="form-control" id="comment-input" rows="5"></textarea>
+                  </div>
+                  <button class="btn btn-default" id="submit" type="submit">Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
+    
+    <div class="card" id="pending">
+
+
+    </div>
+
     <script>
       var map;
       function initMap() {
@@ -27,7 +73,24 @@
           center: {lat: 37.5407, lng: -77.434769 },
           zoom: 8
         });
-      }
+
+        $("#submit").on("click", function(event) {
+          event.preventDefault();
+			// Gather user inputs
+			var userInput = {
+				name: $('#name-input').val().trim(),
+        location: $('#location-input').val().trim(),
+				latitude: $('#lat-input').val().trim(),
+        longitude: $('#long-input').val().trim(),
+        summary: $('#comment-input').val().trim()
+        }
+        //test to view userInput data in console
+        console.log('userInput = ' + JSON.stringify(userInput));
+        //$.post('api/???', userInput)
+          //.done(function(data) {
+
+          //}console.log('response = ' + JSON.stringify(data));
+
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=" + Better API Key Pending + "&callback=initMap"
     async defer></script>
