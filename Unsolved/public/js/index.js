@@ -86,7 +86,7 @@ var handleFormSubmit = function(event) {
 // Remove the example from the db and refresh the list
 var handleDeleteBtnClick = function() {
   var idToDelete = $(this)
-    .parent()
+    .parent();
     .attr("data-id");
 
   API.deleteExample(idToDelete).then(function() {
