@@ -4,24 +4,35 @@
     <title>Simple Map</title>
     <meta name="viewport" content="initial-scale=1.0">
     <meta charset="utf-8">
+    <!--Leaflet CSS-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+   <!-- Make sure you put Leaflet's JS AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+ integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+ crossorigin=""></script>
+
     <style>
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
-      #map {
-        height: 50%;
-      }
+      
       /* Optional: Makes the sample page fill the window. */
       html, body {
         height: 100%;
         margin: 0;
         padding: 0;
       }
+
+      #mapid {
+        height: 180px;
+      }
     </style>
   </head>
   <body>
   <div class="card card-default"> 
     <div class="card-body">
-      <div id="map"></div>
+      <div id="mapid"></div>
     </div>
   </div>
 
@@ -61,12 +72,16 @@
             </div>
           </div>
     
-    <div class="card" id="pending">
+    <div class="container">
+      <div class="card" id="pending">
 
 
+      </div>
     </div>
 
     <script>
+      //Google Maps or Leaflet Open Street Maps?//
+      //Open Street Maps requests credit citation//
       var map;
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
