@@ -1,53 +1,33 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Landmark Locator Ver 1.0.0</title>
+        <title>
+            Landmark Locator Homepage!
+        </title>
         <meta name="viewport" content="initial-scale=1.0">
         <meta charset="utf-8">
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="crossorigin=""/>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="javascript" href="https://www.nps.gov/lib/npmap.js/4.0.0/npmap-bootstrap.js" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="use-credentials">
     </head>
-    
-    <style>
-        #map {
-          height: 350px;
-          position: relative;
-          width: 100%;
-        }
-            
-    </style>
-
     <body>
-    <div class="container">
-        <div class="jumbotron">
-            <h1 class="text-center">Find local landmarks!</h1>
+        <div class="container">
+            <div class="jumbotron">
+                <h1 class="text-center">Use me to find landmarks in your area!</h1>
+            </div>
         </div>
-        <div id="map"></div>
-        <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
-        integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
-        crossorigin=""></script>
-        <script>
-        // var NPMap = {
-        //   div: 'map',
-        //   latitude: -77.434769,
-        //   longitude: 37.5407,
-        //   zoom: 8
-        // };
-        
-        var NPMap = {
-        div: 'map',
-        geocoderControl: {
-        searchPlaces: true
-        }
-        };
-
-        (function () {
-          var s = document.createElement('script');
-          s.src = 'https://www.nps.gov/lib/npmap.js/4.0.0/npmap-bootstrap.js';
-          document.body.appendChild(s);
-        })();
-        
-        </script>
+        <div class="container">
+            <div class="col-lg-12">
+                <button id="locationButton" type="button" class="btn btn-primary">Find a park using my location!</button>
+            </div>
+            <br>
+            <div class="col-lg-12">
+                <button id="freeMapButton" type="button" class="btn btn-primary">Give me a map for me to explore!</button>
+            </div>
+        </div>
     </body>
 </html>
+
+<!-- To Do List:
+Add functionality to the buttons
+Implement CSS to make this all look nice
+Create a modal to get consent for locationButton 
+Link mySQL database to create personal persistent landmarks. -->
