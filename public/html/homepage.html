@@ -4,26 +4,53 @@
         <title>
             Landmark Locator Homepage!
         </title>
-        <meta name="viewport" content="initial-scale=1.0">
         <meta charset="utf-8">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     </head>
     <body>
         <div class="container">
             <div class="jumbotron">
-                <h1 class="text-center">Use me to find landmarks in your area!</h1>
+                <h2 class="text-center">Use me to find landmarks in your area!</h2>
             </div>
         </div>
-        <div class="container">
+        <div class="container" id="consentButtons">
             <div class="col-lg-12">
-                <button id="locationButton" type="button" class="btn btn-primary">Find a park using my location!</button>
+                <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary">Find a park using my location!</button>
             </div>
+            <!--Modal-->
+            <div id='myModal' class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <!---Modal Conent--->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class='close' data-dismiss="modal"></button>
+                            <h4 class="modal-title">Before you continue....</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>Before you continue, we need to confirm that you are willing to allow us to use your location to determine nearby landmarks</p>
+                            <br>
+                            <p>By clicking "I agree", you allow this app to use your location</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button id="agree" type="button" class="btn btn-default" data-dismiss="modal">I agree</button>
+                            <br>
+                            <br>
+                            <button id="disagree" type="button" class="btn btn-default" data-dismiss="modal">I disagree</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
             <br>
             <div class="col-lg-12">
                 <button id="freeMapButton" type="button" class="btn btn-primary">Give me a map for me to explore!</button>
             </div>
         </div>
     </body>
+
 </html>
 
 <!-- To Do List:
