@@ -15,15 +15,32 @@
           position: relative;
           width: 100%;
         }
+
+        .text-center {
+            text-align: center;
+        }
+
+        #find-local {
+            font-family: Arial, sans-serif;
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        body {
+            background-color: #bab86c;
+        }
             
     </style>
 
     <body>
     <div class="container">
         <div class="jumbotron">
-            <h1 class="text-center">Find local landmarks!</h1>
+            <h1 class="text-center" id="find-local">Find local landmarks!</h1>
+            <h3 class="text-center">Hover your cursor over the dots below</h3>
         </div>
         <div id="map"></div>
+
+        <p>History comes alive even in your own neck of the woods</p>
         <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
         integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
         crossorigin=""></script>
