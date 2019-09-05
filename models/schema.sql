@@ -8,6 +8,7 @@ CREATE TABLE parks
 (
     id int NOT NULL AUTO_INCREMENT,
 	name varchar(100) NOT NULL,
+    address varchar(255) NOT NULL,
     latitude DECIMAL(8,6),
     longitude DECIMAL(8,6),
     /*park_id
