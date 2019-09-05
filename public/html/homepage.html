@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<<<<<<< Updated upstream
     <head>
         <title>
             Landmark Locator Homepage!
@@ -12,6 +13,130 @@
         <div class="container">
             <div class="jumbotron">
                 <h1 class="text-center">Use me to find landmarks in your area!</h1>
+=======
+
+<head>
+    <title>
+        Landmark Locator Homepage!
+    </title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<style> 
+    /*add full-width input fields*/ 
+    input[type=text], 
+    input[type=password] { 
+        width: 100%; 
+        padding: 12px 20px; 
+        margin: 8px 0; 
+        display: inline-block; 
+        border: 2px solid #ccc; 
+        box-sizing: border-box; 
+    } 
+    /* set a style for all buttons*/ 
+    button { 
+        background-color: green; 
+        color: white; 
+        padding: 14px 20px; 
+        margin: 8px 0; 
+        cursor: pointer; 
+        width: 100%; 
+    } 
+    /*set styles for the cancel button*/ 
+    .cancelbtn { 
+        padding: 14px 20px; 
+        background-color: #FF2E00; 
+    } 
+    /*float cancel and signup buttons and add an equal width*/ 
+    .cancelbtn, 
+    .signupbtn { 
+        float: left; 
+        width: 50% 
+    } 
+    /*add padding to container elements*/ 
+    .container { 
+        padding: 16px; 
+    } 
+    /*define the modal’s background*/ 
+      
+    .modal { 
+        display: none; 
+        position: fixed; 
+        z-index: 1; 
+        left: 0; 
+        top: 0; 
+        width: 100%; 
+        height: 100%; 
+        overflow: auto; 
+        background-color: rgb(0, 0, 0); 
+        background-color: rgba(0, 0, 0, 0.4); 
+        padding-top: 60px; 
+    } 
+    /*define the modal-content background*/ 
+      
+    .modal-content { 
+        background-color: #fefefe; 
+        margin: 5% auto 15% auto; 
+        border: 1px solid #888; 
+        width: 80%; 
+    } 
+    /*define the close button*/ 
+      
+    .close { 
+        position: absolute; 
+        right: 35px; 
+        top: 15px; 
+        color: #000; 
+        font-size: 40px; 
+        font-weight: bold; 
+    } 
+    /*define the close hover and focus effects*/ 
+      
+    .close:hover, 
+    .close:focus { 
+        color: red; 
+        cursor: pointer; 
+    } 
+      
+    .clearfix::after { 
+        content: ""; 
+        clear: both; 
+        display: table; 
+    } 
+      
+    @media screen and (max-width: 300px) { 
+        .cancelbtn, 
+        .signupbtn { 
+            width: 100%; 
+        } 
+    } 
+</style> 
+
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <!-- <span class="navbar-brand mb-1 h1">Navbar</span> -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-item">
+                        <a class="nav-link" href="homepage.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="consentedMap.html">Your Location</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="map.html">Contact</a>
+                    </li>
+                </ul>
+>>>>>>> Stashed changes
             </div>
         </div>
         <div class="container">
@@ -23,11 +148,75 @@
                 <button id="freeMapButton" type="button" class="btn btn-primary">Give me a map for me to explore!</button>
             </div>
         </div>
+<<<<<<< Updated upstream
     </body>
 </html>
+=======
+    </div>
+
+    <button onclick="document.getElementById('modal1').style.display='block'" style="width:auto;">Sign Up</button> 
+  
+    <!--Modal stuff HTML-->
+    <div id="modal1" class="modal"> 
+        <span onclick="document.getElementById('modal1').style.display='none'" class="close" title="Close Modal">×</span> 
+        <form class="modal-content animate" action="/action_page.php"> 
+            <div class="container"> 
+                
+                <p>I consent to this site using my location</p> 
+  
+                <div class="clearfix"> 
+                    <button type="button" onclick="document.getElementById('modal1').style.display='none'" class="cancelbtn">Cancel</button> 
+                    <button type="submit" class="signupbtn"><a href="consentedMap.html">OK</a></button> 
+                </div> 
+            </div> 
+        </form> 
+    </div> 
+
+>>>>>>> Stashed changes
 
 <!-- To Do List:
 Add functionality to the buttons
 Implement CSS to make this all look nice
 Create a modal to get consent for locationButton 
 Link mySQL database to create personal persistent landmarks. -->
+<<<<<<< Updated upstream
+=======
+
+<script type='text/javascript'>
+
+//NOTE- Currently the Location Consent Modal is accessible by that temporary green Sign UP button
+
+$(document).ready(function() {
+			$('select').material_select();
+			$('.modal').modal({
+				dismissible: false, // Modal can be dismissed by clicking outside of the modal
+				opacity: .5, // Opacity of modal background
+				inDuration: 300, // Transition in duration
+				outDuration: 200, // Transition out duration
+				startingTop: '4%', // Starting top style attribute
+				endingTop: '10%' // Ending top style attribute
+			});
+        });
+
+        var modal = document.getElementById('modal1'); 
+  
+        window.onclick = function(event) { 
+            if (event.target == modal) { 
+                modal.style.display = "none"; 
+            } 
+        } 
+        
+    $('#locationButton').on('click', function() {
+    console.log('I have been clicked');
+    // Pop open the modal dialog
+    $(modal).modal('open');
+    
+    //if (user presses OK to consent message) {
+    //<a href='consentedMap.html'></a>
+    
+    //}
+})
+</script>
+</body>
+</html>
+>>>>>>> Stashed changes
