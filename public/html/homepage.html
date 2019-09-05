@@ -14,8 +14,7 @@
 
 <style> 
     /*add full-width input fields*/ 
-    input[type=text], 
-    input[type=password] { 
+    input[type=text] { 
         width: 100%; 
         padding: 12px 20px; 
         margin: 8px 0; 
@@ -25,7 +24,7 @@
     } 
     /* set a style for all buttons*/ 
     button { 
-        background-color: green; 
+        background-color: blue; 
         color: white; 
         padding: 14px 20px; 
         margin: 8px 0; 
@@ -106,7 +105,7 @@
 <body>
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <!-- <span class="navbar-brand mb-1 h1">Navbar</span> -->
+            <span class="navbar-brand mb-1 h1">Navbar</span>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -140,19 +139,19 @@
 
     </div>
 
-    <button onclick="document.getElementById('modal1').style.display='block'" style="width:auto;">Sign Up</button> 
+    <button onclick="document.getElementById('modal1').style.display='block'" style="width:auto;">Find a Park using my Location</button> 
   
     <!--Modal stuff HTML-->
     <div id="modal1" class="modal"> 
         <span onclick="document.getElementById('modal1').style.display='none'" class="close" title="Close Modal">×</span> 
-        <form class="modal-content animate" action="/action_page.php"> 
+        <form class="modal-content animate" action="../html/consentedMap.html"> 
             <div class="container"> 
                 
                 <p>I consent to this site using my location</p> 
   
                 <div class="clearfix"> 
                     <button type="button" onclick="document.getElementById('modal1').style.display='none'" class="cancelbtn">Cancel</button> 
-                    <button type="submit" class="signupbtn"><a href="consentedMap.html">OK</a></button> 
+                    <button type="submit" class="signupbtn">OK</a></button> 
                 </div> 
             </div> 
         </form> 
@@ -184,7 +183,7 @@ $(document).ready(function() {
 			});
         });
 
-        var modal = document.getElementById('modal1'); 
+        var modal = $('#modal1'); 
   
         window.onclick = function(event) { 
             if (event.target == modal) { 
