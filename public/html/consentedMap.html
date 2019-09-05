@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+  
     <head>
         <title>Landmark Locator Ver 1.0.0</title>
         <meta name="viewport" content="initial-scale=1.0">
@@ -34,45 +35,73 @@
     </style>
 
 
+
     <body>
 
 <!--Ryan: Choices for background gradient: olive green (#708238) and raw umber (#826644) subtle transitioning-->
 <!--Ryan: National Park Service color scheme or something more vibrant??-->
 
-<body>
+
 
     <div class="container">
+
         <div class="jumbotron">
             <h1 class="text-center" id="find-local">Find local landmarks!</h1>
             <h3 class="text-center">Hover your cursor over the dots below</h3>
         </div>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <!-- <span class="navbar-brand mb-1 h1">Navbar</span> -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-item">
+                        <a class="nav-link" href="homepage.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="consentedMap.html">Your Location</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="map.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- <div class="jumbotron">
+            <h1 class="text-center">Find local landmarks!</h1>
+        </div> -->
+
         <div id="map"></div>
 
         <p>History comes alive even in your own neck of the woods</p>
         <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
-        integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
-        crossorigin=""></script>
+            integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+            crossorigin=""></script>
         <script>
-        // var NPMap = {
-        //   div: 'map',
-        //   latitude: -77.434769,
-        //   longitude: 37.5407,
-        //   zoom: 8
-        // };
-        
-        var NPMap = {
-        div: 'map',
-        geocoderControl: {
-        searchPlaces: true
-        }
-        };
+            // var NPMap = {
+            //   div: 'map',
+            //   latitude: -77.434769,
+            //   longitude: 37.5407,
+            //   zoom: 8
+            // };
 
-        (function () {
-          var s = document.createElement('script');
-          s.src = 'https://www.nps.gov/lib/npmap.js/4.0.0/npmap-bootstrap.js';
-          document.body.appendChild(s);
-        })();
-        
+            var NPMap = {
+                div: 'map',
+                geocoderControl: {
+                    searchPlaces: true
+                }
+            };
+
+            (function () {
+                var s = document.createElement('script');
+                s.src = 'https://www.nps.gov/lib/npmap.js/4.0.0/npmap-bootstrap.js';
+                document.body.appendChild(s);
+            })();
+
         </script>
-    </body>
+</body>
+
 </html>
