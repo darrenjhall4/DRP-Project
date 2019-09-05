@@ -11,6 +11,12 @@
   <style>
     /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
+    body {
+      background-image: url("yellowstone.png");
+      border: 2px solid black;
+      background-size: auto;
+    }
+
     #map {
       height: 50%;
     }
@@ -89,38 +95,40 @@
 
     <div class="card card-default">
       <div class="card-body">
-        <div id="map"></div>
+        <div id="map">
+          <p>fill me in with data please!</p>
+        </div>
       </div>
     </div>
   </div>
-    <script>
-      var map;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: { lat: 37.5407, lng: -77.434769 },
-          zoom: 8
-        });
+  <script>
+    var map;
+    function initMap() {
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: { lat: 37.5407, lng: -77.434769 },
+        zoom: 8
+      });
+    }
+    $("#submit").on("click", function (event) {
+      event.preventDefault();
+      // Gather user inputs
+      var userInput = {
+        name: $('#name-input').val().trim(),
+        location: $('#location-input').val().trim(),
+        latitude: $('#lat-input').val().trim(),
+        longitude: $('#long-input').val().trim(),
+        summary: $('#comment-input').val().trim()
       }
-        $("#submit").on("click", function (event) {
-          event.preventDefault();
-          // Gather user inputs
-          var userInput = {
-            name: $('#name-input').val().trim(),
-            location: $('#location-input').val().trim(),
-            latitude: $('#lat-input').val().trim(),
-            longitude: $('#long-input').val().trim(),
-            summary: $('#comment-input').val().trim()
-          }
-          //test to view userInput data in console
-          console.log('userInput = ' + JSON.stringify(userInput));
-          //$.post('api/???', userInput)
-          //.done(function(data) {
+      //test to view userInput data in console
+      console.log('userInput = ' + JSON.stringify(userInput));
+      //$.post('api/???', userInput)
+      //.done(function(data) {
 
-          //}console.log('response = ' + JSON.stringify(data));
-        });
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=" + Better API Key Pending + "&callback=initMap" async
-      defer></script>
+      //}console.log('response = ' + JSON.stringify(data));
+    });
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=" + Better API Key Pending + "&callback=initMap" async
+    defer></script>
 </body>
 
 </html>

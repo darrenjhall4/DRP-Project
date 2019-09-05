@@ -10,11 +10,29 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+        body {
+            background-image: url("yellowstone.png");
+            border: 2px solid black;
+            background-size: auto;
+        }
+
+        #navColor {
+            background-color: #cccccc;
+            background-image: linear-gradient(black, green);
+        }
+
+        #jumboColor {
+            background-color: #cccccc;
+            background-image: linear-gradient(green, black, green, black, green, black);
+        }
+
+    </style>
 </head>
 
 <body>
     <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navColor">
             <!-- <span class="navbar-brand mb-1 h1">Navbar</span> -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,7 +52,7 @@
                 </ul>
             </div>
         </nav>
-        <div class="jumbotron">
+        <div class="jumbotron" id="jumboColor">
             <h1 class="text-center">Use me to find landmarks in your area!</h1>
         </div>
     </div>
