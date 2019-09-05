@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "Use Personal Password",
+    "password": process.env.PASSWORD,
     "database": "nat_parks_db",
     "host": "localhost",
     "dialect": "mysql"
