@@ -6,13 +6,13 @@ USE nat_parks_db;
 
 CREATE TABLE parks
 (
-    id int NOT NULL AUTO_INCREMENT,
+    id INT NOT NULL,
 	name varchar(100) NOT NULL,
     address varchar(255) NOT NULL,
-    latitude DECIMAL(8,6),
-    longitude DECIMAL(8,6),
-    /*park_id
-    description
-    PRIMARY KEY(id)*/
+    latitude DECIMAL(8,6) NOT NULL,
+    longitude DECIMAL(8,6) NOT NULL,
+    PRIMARY KEY (id)
 
-)
+);
+
+SELECT * FROM parks;

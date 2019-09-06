@@ -21,7 +21,12 @@ var connection = mysql.createConnection({
   function queryLandmarks() {
     let landmark_list = []; 
       connection.query("SELECT * FROM parks", function(err, res) {
+        if (res.length<0) {
+          console.log("No data found at this time");
+        }
+        else {
         landmark_list = res;
+        }
       });
       return landmark_list;
   }
