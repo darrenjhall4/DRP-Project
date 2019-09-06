@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "Use Personal Password",
+    "password": "wtf",
     "database": "nat_parks_db",
     "host": "localhost",
     "dialect": "mysql"
@@ -15,8 +15,11 @@
     "logging": false
   },
   "production": {
-    "use_env_variable": "JAWSDB_URL",
-    "dialect": "mysql"
+    "username": "i3iu6508eaiydi65",
+    "password": "b5790f7azxwc1grb",
+    "database": "dz81dpa0ohv7wkwf",
+    "host": "q68u8b2buodpme2n.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "dialect": "mysql",
+    "logging": false
   }
 }
-  

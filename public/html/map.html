@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-
+​
 <head>
     <title>Simple Map</title>
     <meta name="viewport" content="initial-scale=1.0">
@@ -108,6 +108,7 @@
         </div>
       </div>
     </div>
+    <script type="text/javascript" src="/DRP-Project/public/js/map.js"></script>
       <script type="text/javascript">
         //setting up the default map- centered upon Edgar Allan Poe Museum in Richmond
         var mymap = L.map('mapid').setView([37.5321008, -77.4260374], 15);
@@ -132,15 +133,16 @@
             }
             //test to view userInput data in console
             console.log('userInput = ' + JSON.stringify(userInput));
-            /*$.post('api/map', userInput)
+            $.post('api/map', userInput)
             .done(function(data) {
   
             console.log('response = ' + JSON.stringify(data));
-            })*/
+            })
+            loadMap();
           });
       
           
-
+​
       </script>
   </body>
   

@@ -6,8 +6,13 @@
         <meta name="viewport" content="initial-scale=1.0">
         <meta charset="utf-8">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="crossorigin=""/>
+        <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+ integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+ crossorigin=""></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="javascript" href="https://www.nps.gov/lib/npmap.js/4.0.0/npmap-bootstrap.js" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="use-credentials">
+    
     </head>
     
     <style>
@@ -28,14 +33,21 @@
         }
 
         body {
-            background-color: #bab86c;
+            background-image: linear-gradient(to right, #708238 , #826644);
         }
+        
             
     </style>
 
 
 
-<body>
+    <body>
+
+<!--Ryan: Choices for background gradient: olive green (#708238) and raw umber (#826644) subtle transitioning-->
+<!--Ryan: National Park Service color scheme or something more vibrant??-->
+
+
+
     <div class="container">
 
         <div class="jumbotron">
@@ -93,6 +105,8 @@
                 s.src = 'https://www.nps.gov/lib/npmap.js/4.0.0/npmap-bootstrap.js';
                 document.body.appendChild(s);
             })();
+
+    //var marker = L.marker([37.5309079, -77.425971]).addTo(NPMap);
 
         </script>
 </body>

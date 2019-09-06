@@ -1,5 +1,10 @@
 module.exports = function(sequelize, DataTypes) {
   var Landmark = sequelize.define("Landmark", {
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true
+    },
     name: {
       type: DataTypes.STRING,
       allowNull: false,
