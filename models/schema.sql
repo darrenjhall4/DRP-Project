@@ -16,3 +16,4 @@ CREATE TABLE parks
 );
 
 SELECT * from parks;
+

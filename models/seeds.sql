@@ -1,3 +1,4 @@
+
 INSERT INTO parks (park_name, park_location, latitude, longitude)
 VALUES ('Tredegar Iron Works', '470 Tredegar St, Richmond, VA 23219', 37.5351372, -77.4471087);
 
@@ -15,3 +16,4 @@ VALUES ('Byrd Theatre', '2908 W Cary St, Richmond, VA 23221', 37.5524452, -77.48
 
 INSERT INTO parks (park_name, park_location, latitude, longitude)
 VALUES ('John Marshall House', '818 E Marshall St, Richmond, VA 23219', 37.5407032, -77.431759);
+
