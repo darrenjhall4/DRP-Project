@@ -1,11 +1,7 @@
 {
   "development": {
     "username": "root",
-<<<<<<< HEAD
-    "password": "D0nu7m3w3rs22!",
-=======
-    "password": process.env.PASSWORD,
->>>>>>> 36c393915baa0574d20c65f5d45f0e8c66c8e26f
+    "password": "wtf",
     "database": "nat_parks_db",
     "host": "localhost",
     "dialect": "mysql"
