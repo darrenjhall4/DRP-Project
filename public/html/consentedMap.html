@@ -1,88 +1,106 @@
 <!DOCTYPE html>
 <html>
-  
-    <head>
-        <title>Landmark Locator Ver 1.0.0</title>
-        <meta name="viewport" content="initial-scale=1.0">
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="crossorigin=""/>
-        <!-- Make sure you put this AFTER Leaflet's CSS -->
- <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
- integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
- crossorigin=""></script>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="javascript" href="https://www.nps.gov/lib/npmap.js/4.0.0/npmap-bootstrap.js" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="use-credentials">
-    
-    </head>
-    
-    <style>
-        #map {
-          height: 350px;
-          position: relative;
-          width: 100%;
-        }
 
-        .text-center {
-            text-align: center;
-        }
+<head>
+    <title>Landmark Locator Ver 1.0.0</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin="" />
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+        integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+        crossorigin=""></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="javascript" href="https://www.nps.gov/lib/npmap.js/4.0.0/npmap-bootstrap.js"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="use-credentials">
 
-        #find-local {
-            font-family: Arial, sans-serif;
-            font-size: 36px;
-            font-weight: bold;
-        }
+</head>
 
-        body {
-            background-image: repeating-linear-gradient(green, greenyellow, green);
-        }
+<style>
+    body {
+        background-attachment: scroll;
+        background-image: url("gc2.jpg");
+        color: #1f4045;
+        text-align: center;
+        font-weight: bold;
+    }
 
-        #tagline {
-            color: white;
-            text-align: center;
-        }
-        
-            
-    </style>
+    #navy {
+        background-color: #1f4045;
+    }
+
+    #jumbo {
+        background-image: url("gc2.jpg");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        font-weight: bold;
+        background-color: #e3d8ab;
+    }
+
+    #map {
+        height: 350px;
+        position: relative;
+        width: 100%;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    #find-local {
+        font-family: Arial, sans-serif;
+        font-size: 36px;
+        font-weight: bold;
+    }
+
+    /* body {
+        background-image: repeating-linear-gradient(green, greenyellow, green);
+    } */
+
+
+    /* 
+    #tagline {
+        color: white;
+        text-align: center;
+    } */
+</style>
 
 
 
-    <body>
+<body>
 
-<!--Ryan: Choices for background gradient: olive green (#708238) and raw umber (#826644) subtle transitioning-->
-<!--Ryan: National Park Service color scheme or something more vibrant??-->
+    <!--Ryan: Choices for background gradient: olive green (#708238) and raw umber (#826644) subtle transitioning-->
+    <!--Ryan: National Park Service color scheme or something more vibrant??-->
 
 
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom" id="navy">
+        <span class="navbar-brand mb-1 h1">Park Look</span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="nav-item">
+                    <a class="nav-link" href="homepage.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="consentedMap.html">Your Location</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="map.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
     <div class="container">
 
-        <div class="jumbotron">
-            <h1 class="text-center" id="find-local">Find local landmarks!</h1>
-            <h3 class="text-center">Hover your cursor over the dots below</h3>
-        </div>
-
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <!-- <span class="navbar-brand mb-1 h1">Navbar</span> -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="nav-item">
-                        <a class="nav-link" href="homepage.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="consentedMap.html">Your Location</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="map.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <!-- <div class="jumbotron">
-            <h1 class="text-center">Find local landmarks!</h1>
-        </div> -->
 
         <div id="map"></div>
 
