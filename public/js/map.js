@@ -10,7 +10,7 @@ var connection = mysql.createConnection({
     user: "root",
   
     // Your password
-    password: process.env.PASSWORD,
+    password: "",
     database: "nat_parks_db"
   });
   connection.connect(function(err) {
@@ -36,3 +36,5 @@ var connection = mysql.createConnection({
       var marker = L.marker([landmark_list[i].longitude, landmark_list[i].latitude]).addTo(myMap);
     }
   }
+
+  module.exports .env;

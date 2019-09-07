@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "wtf",
+    "password": "",
     "database": "nat_parks_db",
     "host": "localhost",
     "dialect": "mysql"
